@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: white;
+    border-bottom: 3px dashed black;
+    box-shadow: 0px 0px 20px rgba(83, 83, 83, 0.8);
+}
+header .header-box{
+    width: 100%;
+    max-width: 70rem;
+    height: 4.5rem;
+    padding: 1.25rem 2rem;
+    margin: 0 auto;
+    line-height: normal;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+header .header-box .logo-box{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+header .header-box .navbar{
+    float: right;
+}
+header .header-box .navbar .navbar-box{
+    display: inline-block;
+    padding: 0 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 2rem;
+}
+.introduce{
+    max-width: 1100px;
+    background: url(img/background1.jpg);
+    height: 35rem;
+    padding: 100px 50px;
+    margin: 150px auto;
+    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
+
+}
+.introduce h1{
+    text-align: center;
+    color: white;
+    font-weight: 900;
+
+}
+
+.About-me{
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 100px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
+}
+.About-me h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    width: 100%;
+    height: 20%;
+    border-top: 3px dotted black;
+    border-bottom: 3px dotted black;
+}
+.About-me .box{
+    width: 50%;
+    height: 80%;
+    float: left;
+    
+}
+.Skills{
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 100px;
+    border: 1px solid red;
+    display: flex;
+    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
+}
+.Skills .box{
+    width: 50%;
+    float: left;
+}
+.Git-Hub{
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 100px;
+    border: 1px solid red;
+    display: flex;
+    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
+}
+.Git-Hub .box{
+    width: 50%;
+    float: left;
+}
+.Project{
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 100px;
+    border: 1px solid red;
+    display: flex;
+    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
+}
+.Project .box{
+    width: 50%;
+    float: left;
+}
+footer{
+    width: 1320px;
+    padding: 20px 20px 0;
+    margin: auto;
+    margin-top: 200px;
+    background-color: white;
+}
+footer h1{
+    text-align: center;
+    font-size: 5rem;
+    padding: 30px;
+}
