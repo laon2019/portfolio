@@ -1,77 +1,213 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Fredoka+One&display=swap');
+
+* {
     margin: 0;
     padding: 0;
 }
-a{
+
+.font1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    color: rgb(68, 68, 68);
+}
+
+.font2 {
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+a {
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none;
 }
-header{
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: radial-gradient(ellipse at center, rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #B7E8EB 100%);
+    overflow-x: hidden;
+}
+
+.ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+
+    0%,
+    100% {
+        transform: translate3d(0, -25px, 0);
+    }
+
+    50% {
+        transform: translate3d(0, 5px, 0);
+    }
+}
+
+
+.hambugerbar {
+    display: none;
+}
+
+
+
+header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 5;
+    width: 100%;
     background-color: white;
-    border-bottom: 3px dashed black;
     box-shadow: 0px 0px 20px rgba(83, 83, 83, 0.8);
 }
-header .header-box{
-    width: 100%;
-    max-width: 70rem;
-    height: 4.5rem;
-    padding: 1.25rem 2rem;
-    margin: 0 auto;
-    line-height: normal;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-header .header-box .logo-box{
-    display: inline-block;
-    font-size: 1.5rem;
-    font-weight: 900;
-}
-header .header-box .navbar{
-    float: right;
-}
-header .header-box .navbar .navbar-box{
-    display: inline-block;
-    padding: 0 1rem;
-    font-weight: 700;
-    font-size: 1.2rem;
-    cursor: pointer;
-    line-height: 2rem;
-}
-.introduce{
-    max-width: 1100px;
-    background: url(img/background1.jpg);
-    height: 35rem;
-    padding: 100px 50px;
-    margin: 150px auto;
-    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
 
-}
-.introduce h1{
+header h2 {
     text-align: center;
-    color: white;
-    font-weight: 900;
-
+    padding: 20px;
+    font-size: 2rem;
 }
 
-.About-me{
+
+
+.introduce {
     max-width: 1100px;
+    min-width: 300px;
     margin: auto;
     padding: 20px;
     margin-top: 100px;
+    margin-bottom: 300px;
     display: flex;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    border: 3px solid rgb(202, 202, 202);
     box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
 }
-.About-me h1{
+
+.introduce h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    width: 100%;
+    height: 20%;
+
+}
+
+.introduce .box {
+    width: 50%;
+    height: 80%;
+    float: left;
+}
+
+.introduce .box .category1 {
+    max-width: 70%;
+    width: 100%;
+    height: 2.5rem;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 35px;
+    background-color: #B7E8EB;
+}
+.introduce .box .category2 {
+    max-width: 70%;
+    width: 100%;
+    height: 2.5rem;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 35px;
+    background-color: #B7E8EB;
+}
+.introduce .box .category3 {
+    max-width: 70%;
+    width: 100%;
+    height: 2.5rem;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 35px;
+    background-color: #B7E8EB;
+}
+.introduce .box .category4 {
+    max-width: 70%;
+    width: 100%;
+    height: 2.5rem;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 35px;
+    background-color: #B7E8EB;
+}
+
+.introduce .box .category1:hover {
+    background-color: #ff9969;
+}
+
+.introduce .box .category2:hover {
+    background-color: #98fd8f;
+}
+
+.introduce .box .category3:hover {
+    background-color: #f899a9;
+}
+
+.introduce .box .category4:hover {
+    background-color: #fdee97;
+}
+
+#box1, #box2, #box3, #box4{
+    height: 50px;
+}
+
+.About-me {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 200px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 3px solid rgb(202, 202, 202);
+    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
+    background-color: #ff9969;
+}
+
+.About-me h1 {
     text-align: center;
     color: rgb(0, 0, 0);
     font-weight: 900;
@@ -80,60 +216,167 @@ header .header-box .navbar .navbar-box{
     border-top: 3px dotted black;
     border-bottom: 3px dotted black;
 }
-.About-me .box{
+
+.About-me .box {
     width: 50%;
     height: 80%;
     float: left;
-    
 }
-.Skills{
+
+
+
+
+
+
+.Skills {
     max-width: 1100px;
     margin: auto;
     padding: 20px;
-    margin-top: 100px;
-    border: 1px solid red;
-    display: flex;
-    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
-}
-.Skills .box{
-    width: 50%;
-    float: left;
-}
-.Git-Hub{
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-    margin-top: 100px;
-    border: 1px solid red;
-    display: flex;
-    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
-}
-.Git-Hub .box{
-    width: 50%;
-    float: left;
-}
-.Project{
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-    margin-top: 100px;
-    border: 1px solid red;
-    display: flex;
-    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
-}
-.Project .box{
-    width: 50%;
-    float: left;
-}
-footer{
-    width: 1320px;
-    padding: 20px 20px 0;
-    margin: auto;
     margin-top: 200px;
-    background-color: white;
+    display: flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 3px solid rgb(202, 202, 202);
+    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
+    background-color: #98fd8f;
 }
-footer h1{
+
+.Skills h1 {
     text-align: center;
-    font-size: 5rem;
-    padding: 30px;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    width: 100%;
+    height: 20%;
+    border-top: 3px dotted black;
+    border-bottom: 3px dotted black;
+}
+
+.Skills .box {
+    width: 50%;
+    height: 80%;
+    float: left;
+
+}
+.Main-Project {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 200px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 3px solid rgb(202, 202, 202);
+    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
+    background-color: #f899a9;
+}
+
+.Main-Project h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    width: 100%;
+    height: 20%;
+    border-top: 3px dotted black;
+    border-bottom: 3px dotted black;
+}
+
+.Main-Project .box {
+    width: 50%;
+    height: 80%;
+    float: left;
+
+}
+.Project {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 200px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 3px solid rgb(202, 202, 202);
+    box-shadow: 20px 20px 20px rgba(83, 83, 83, 0.8);
+    background-color: #fdee97;
+}
+
+.Project h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    width: 100%;
+    height: 20%;
+    border-top: 3px dotted black;
+    border-bottom: 3px dotted black;
+}
+
+.Project .box {
+    width: 50%;
+    height: 80%;
+    float: left;
+
+}
+
+
+ .box img {
+    max-width: 90%;
+    max-height: 90%;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.goTop{
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+footer{
+    height: 200px;
+}
+.down{
+    display: none;
+}
+.down.on{
+    display: block;
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, 0);
+    font-size: 50px;
+}
+/*반응형*/
+/*pc*/
+
+/*1024 테블릿모드*/
+@media screen and (max-width:1400px) {
+    /*1400px~1024px사이*/
+
+
+}
+
+/*1024 이하 테블릿*/
+@media screen and (max-width:1000px) {
+
+    .font1{
+        font-size: 1.4rem;
+    }
+    .navbar {
+        display: none;
+    }
+    .ocean {
+        display: none;
+    }
+
+    .Project .box .category a {
+        font-size: 1.5rem;
+    }
 }
